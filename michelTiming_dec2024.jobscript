@@ -5,9 +5,9 @@ Shu: The multi-line comments...
 EOF
 
 # fcl file and DUNE software version/qualifier to be used
-FCL_FILE=${FCL_FILE:-runmicheltime.fcl.fcl} #Shu: '-' is NOT part of fhicl name---
-DUNE_VERSION=${DUNE_VERSION:-v09_75_00d00}
-DUNE_QUALIFIER=${DUNE_QUALIFIER:-e20:prof}
+FCL_FILE=${FCL_FILE:-runmicheltime.fcl.fcl} # Shu: '-' is NOT part of fhicl name---
+DUNE_VERSION=${DUNE_VERSION:-v10_01_03d01}
+DUNE_QUALIFIER=${DUNE_QUALIFIER:-e26:prof}
 
 # number of events to process from the input file
 if [ "$NUM_EVENTS" != "" ] ; then
