@@ -1,24 +1,11 @@
 #!/bin/bash
 :<<'EOF'
-
-To use this jobscript to process 10 files from the dc4-vd-coldbox-bottom
-data and put the output in the usertests namespace (MetaCat) and 
-scope (Rucio), and in the usertests:output-test-01 dataset in MetaCat and
-Rucio, use this command to create the workflow:
-
-justin simple-workflow \
---mql \
-"files from dune:all where core.run_type='dc4-vd-coldbox-bottom' and dune.campaign='dc4' limit 10" \
---jobscript dc4-vd-coldbox-bottom.jobscript --max-distance 30 --rss-mb 4000 \
---scope usertests --output-pattern '*_reco_data_*.root:output-test-01' 
-
-The following optional environment variables can be set when creating the
-workflow/stage: FCL_FILE, NUM_EVENTS, DUNE_VERSION, DUNE_QUALIFIER 
+Shu: The multi-line comments...
 
 EOF
 
 # fcl file and DUNE software version/qualifier to be used
-FCL_FILE=${FCL_FILE:-vdcoldbox_raw_dataprep_reco.fcl}
+FCL_FILE=${FCL_FILE:-runmicheltime.fcl.fcl} #Shu: '-' is NOT part of fhicl name---
 DUNE_VERSION=${DUNE_VERSION:-v09_75_00d00}
 DUNE_QUALIFIER=${DUNE_QUALIFIER:-e20:prof}
 
